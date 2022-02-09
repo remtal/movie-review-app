@@ -18,5 +18,31 @@ import search from "../../assets/search-icon-white.png";
 export default function SideNavBar() {
   /* Write the necessary functions to show and hide the side bar on small devices */
 
-  return <SideNavBarCont></SideNavBarCont>;
+  return (
+    <SideNavBarCont>
+      <SideNavHeader>
+        Wesley
+        <NavIcon>
+          <img src={arrow} alt="arrow" />
+        </NavIcon>
+      </SideNavHeader>
+      <SideNavMainLink>
+        Discover
+        <NavIcon>
+          <img src={search} alt="search" />
+        </NavIcon>
+      </SideNavMainLink>
+
+      <HeaderText>
+        <h2>Watched</h2>
+        <p>Movies</p>
+        <p>TV Shows</p>
+      </HeaderText>
+      <HeaderText>
+        <h2>Saved</h2>
+        <p>Movies</p>
+        <p>TV Shows</p>
+      </HeaderText>
+    </SideNavBarCont>
+  );
 }
