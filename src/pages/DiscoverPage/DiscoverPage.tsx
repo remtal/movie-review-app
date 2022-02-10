@@ -11,6 +11,7 @@ import {
   MovieResults,
 } from "./styles";
 
+import MovieItem from "../../components/MovieItem";
 import MovieList from "../../components/MoviesList";
 import React from "react";
 import SearchFilters from "../../components/SearchFilters";
@@ -24,6 +25,7 @@ export default function Discover() {
   return (
     <DiscoverWrapper>
       <SideNavBar />
+      <MovieItem />
     </DiscoverWrapper>
   );
 }

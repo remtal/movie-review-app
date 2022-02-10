@@ -17,6 +17,7 @@ export const SideNavBarCont = styled.div`
   color: white;
   margin-top: -10px;
   margin-left: -10px;
+  grid-area: nav;
 `;
 
 export const SideNavHeader = styled.h1`
