@@ -14,6 +14,7 @@ import {
 } from "./styles";
 
 import Checkbox from "../../components/Checkbox/Checkbox";
+import ExpandableFilter from "../../components/ExpandableFilter";
 import MovieItem from "../../components/MovieItem";
 import MovieList from "../../components/MoviesList";
 import React from "react";
@@ -33,7 +34,7 @@ export default function Discover() {
         <BodyWrapper>
           <MovieItem />
           <SearchBar />
-          <SearchFilter />
+          <ExpandableFilter />
         </BodyWrapper>
       </DiscoverWrapper>
     </GlobalStyle>

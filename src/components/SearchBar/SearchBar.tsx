@@ -19,9 +19,12 @@ import searchIcon from "../../assets/search-icon-yellow.png";
 export default function SearchFilters() {
   return (
     <FiltersWrapper>
-      <SearchFiltersCont>
-        <img src={searchIcon} alt="search" />
-      </SearchFiltersCont>
+      <form action="/" method="get">
+        <SearchFiltersCont>
+          <img src={searchIcon} alt="search" />
+          <input type="text" id="movie-search" />
+        </SearchFiltersCont>
+      </form>
       <SearchFiltersCont>
         <img src={calender} alt="filter" />
       </SearchFiltersCont>
