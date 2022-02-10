@@ -8,10 +8,14 @@ export const GlobalStyle = styled.div`
 
 export const DiscoverWrapper = styled.main`
   display: grid;
-  grid-template-columns: 325px;
-  background-color: #f6f7f9;
 
-  grid-template-areas: "nav body";
+  grid-template-columns: 325px 565px;
+  grid-template-rows: 60px 1fr 1fr;
+  grid-template-areas:
+    "nav . ."
+    "nav main search"
+    "nav main filter"
+    "nav main filter";
 `;
 
 export const BodyWrapper = styled.div`

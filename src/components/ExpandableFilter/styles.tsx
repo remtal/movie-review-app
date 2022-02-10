@@ -8,6 +8,8 @@ export const FilterWrapper = styled.div`
 
   grid-area: filter;
   display: flex;
+  border-radius: 5px;
+
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
@@ -15,6 +17,8 @@ export const FilterWrapper = styled.div`
   > h1 {
     font-size: 16px;
   }
+  /* grid-row: 2;
+  grid-column: 3; */
 `;
 FilterWrapper.displayName = "FilterWrapper";
 

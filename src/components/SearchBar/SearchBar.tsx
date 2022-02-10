@@ -22,12 +22,20 @@ export default function SearchFilters() {
       <form action="/" method="get">
         <SearchFiltersCont>
           <img src={searchIcon} alt="search" />
-          <input type="text" id="movie-search" />
+          <input type="text" id="movie-search" placeholder="Search" />
         </SearchFiltersCont>
       </form>
-      <SearchFiltersCont>
-        <img src={calender} alt="filter" />
-      </SearchFiltersCont>
+      <form action="/" method="get">
+        <SearchFiltersCont>
+          <img src={calender} alt="filter" />
+          <input
+            type="text"
+            className="year"
+            id="movie-search"
+            placeholder="Year of Release"
+          />
+        </SearchFiltersCont>
+      </form>
     </FiltersWrapper>
   );
 }
