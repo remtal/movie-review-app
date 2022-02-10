@@ -5,12 +5,14 @@ import * as colors from "../../utils/colors";
 import * as fetcher from "../../utils/fetcher";
 
 import {
+  BodyWrapper,
   DiscoverWrapper,
   MobilePageTitle,
   MovieFilters,
   MovieResults,
 } from "./styles";
 
+import Checkbox from "../../components/Checkbox/Checkbox";
 import MovieItem from "../../components/MovieItem";
 import MovieList from "../../components/MoviesList";
 import React from "react";
@@ -25,8 +27,11 @@ export default function Discover() {
   return (
     <DiscoverWrapper>
       <SideNavBar />
-      <MovieItem />
-      <SearchFilters />
+      <BodyWrapper>
+        <MovieItem />
+        <SearchFilters />
+      </BodyWrapper>
+      <Checkbox />
     </DiscoverWrapper>
   );
 }

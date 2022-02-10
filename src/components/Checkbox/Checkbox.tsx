@@ -1,8 +1,13 @@
-import { CheckboxCont } from "./styles";
-import React from "react";
+import React, { ReactElement, useState } from "react";
 
-export default function CheckBox() {
-  // Create a custom checkbox component
+import { CustomCheckbox } from "./styles";
 
-  return <CheckboxCont></CheckboxCont>;
+export default function Checkbox(): ReactElement {
+  const [checked, setChecked] = useState(false);
+
+  const handleClick = () => setChecked(!checked);
+
+  return (
+    <CustomCheckbox type="checkbox" onClick={handleClick} checked={checked} />
+  );
 }

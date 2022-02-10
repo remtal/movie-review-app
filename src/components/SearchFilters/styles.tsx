@@ -19,7 +19,7 @@ export const SearchFiltersCont = styled.div`
     position: absolute;
     top: 37px;
     left: 0;
-    right: -20px;
+    right: 0px;
     height: 0.5em;
     border-top: 2px solid #c4ca18;
   }
