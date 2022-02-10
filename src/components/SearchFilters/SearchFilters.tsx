@@ -4,30 +4,26 @@ import * as colors from "../../utils/colors";
 
 import { CategoryTitle, FiltersWrapper, SearchFiltersCont } from "./styles";
 
-import ExpandableFilter from "../ExpandableFilter";
 import React from "react";
-import SearchBar from "../SearchBar";
+import calender from "../../assets/year-icon.png";
+import expandableFilter from "../ExpandableFilter";
+import searchBar from "../SearchBar";
+import searchIcon from "../../assets/search-icon-yellow.png";
 
-interface Props {
-  genres: string;
-  ratings: string;
-  languages: string;
-  searchMovies: string;
-}
-export default function SearchFilters({
-  genres,
-  ratings,
-  languages,
-  searchMovies,
-}: Props) {
+// interface Props {
+//   genres: string;
+//   ratings: string;
+//   languages: string;
+//   searchMovies: string;
+// }
+export default function SearchFilters() {
   return (
     <FiltersWrapper>
-      <SearchFiltersCont className="search_inputs_cont">
-        {/* Implement a "SearchBar" component and re-use it for the keyword and the year inputs */}
+      <SearchFiltersCont>
+        <img src={searchIcon} alt="search" />
       </SearchFiltersCont>
       <SearchFiltersCont>
-        <CategoryTitle>Movies</CategoryTitle>
-        {/* Implement a component called "ExpandableFilter" and apply it to all filter categories */}
+        <img src={calender} alt="filter" />
       </SearchFiltersCont>
     </FiltersWrapper>
   );

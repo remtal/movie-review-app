@@ -26,6 +26,7 @@ export default function Discover() {
     <DiscoverWrapper>
       <SideNavBar />
       <MovieItem />
+      <SearchFilters />
     </DiscoverWrapper>
   );
 }
