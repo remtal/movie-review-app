@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const GlobalStyle = styled.div`
+  height: 100vw;
+  width: 100vw;
+  background-color: #f6f7f9;
+`;
+
 export const DiscoverWrapper = styled.main`
   display: grid;
   grid-template-columns: 325px;
@@ -13,8 +19,9 @@ export const BodyWrapper = styled.div`
   grid-template-columns: 560px 1fr;
   grid-area: body;
   padding-top: 45px;
-  grid-template-areas: "main filter
-  checkbox";
+  grid-template-areas:
+    "main search"
+    ". filter";
 `;
 
 export const TotalCounter = styled.div`

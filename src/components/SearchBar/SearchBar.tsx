@@ -2,10 +2,29 @@
 
 import * as colors from "../../utils/colors";
 
-import CalendarIcon from "../../assets/year-icon.png";
-import React from "react";
-import SearchIcon from "../../assets/search-icon-yellow.png";
+import { FiltersWrapper, SearchFiltersCont } from "./styles";
 
-export default function SearchBar() {
-  return;
+import React from "react";
+import calender from "../../assets/year-icon.png";
+import expandableFilter from "../ExpandableFilter";
+import searchBar from "../SearchBar";
+import searchIcon from "../../assets/search-icon-yellow.png";
+
+// interface Props {
+//   genres: string;
+//   ratings: string;
+//   languages: string;
+//   searchMovies: string;
+// }
+export default function SearchFilters() {
+  return (
+    <FiltersWrapper>
+      <SearchFiltersCont>
+        <img src={searchIcon} alt="search" />
+      </SearchFiltersCont>
+      <SearchFiltersCont>
+        <img src={calender} alt="filter" />
+      </SearchFiltersCont>
+    </FiltersWrapper>
+  );
 }

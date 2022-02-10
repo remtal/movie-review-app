@@ -15,8 +15,7 @@ export const SideNavBarCont = styled.div`
   background-color: ${colors.sideNavBar};
   font-family: "Lato", sans-serif;
   color: white;
-  margin-top: -10px;
-  margin-left: -10px;
+
   grid-area: nav;
 `;
 

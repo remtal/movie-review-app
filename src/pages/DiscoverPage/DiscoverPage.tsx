@@ -7,6 +7,7 @@ import * as fetcher from "../../utils/fetcher";
 import {
   BodyWrapper,
   DiscoverWrapper,
+  GlobalStyle,
   MobilePageTitle,
   MovieFilters,
   MovieResults,
@@ -16,7 +17,8 @@ import Checkbox from "../../components/Checkbox/Checkbox";
 import MovieItem from "../../components/MovieItem";
 import MovieList from "../../components/MoviesList";
 import React from "react";
-import SearchFilters from "../../components/SearchFilters";
+import SearchBar from "../../components/SearchBar";
+import SearchFilter from "../../components/SearchFilters";
 import SideNavBar from "../../components/SideNavBar";
 
 export default function Discover() {
@@ -25,13 +27,15 @@ export default function Discover() {
   // Write a function to trigger the API request and load the search results based on the keyword and year given as parameters
 
   return (
-    <DiscoverWrapper>
-      <SideNavBar />
-      <BodyWrapper>
-        <MovieItem />
-        <SearchFilters />
-      </BodyWrapper>
-      <Checkbox />
-    </DiscoverWrapper>
+    <GlobalStyle>
+      <DiscoverWrapper>
+        <SideNavBar />
+        <BodyWrapper>
+          <MovieItem />
+          <SearchBar />
+          <SearchFilter />
+        </BodyWrapper>
+      </DiscoverWrapper>
+    </GlobalStyle>
   );
 }

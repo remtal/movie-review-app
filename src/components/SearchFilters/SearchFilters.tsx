@@ -2,29 +2,19 @@
 
 import * as colors from "../../utils/colors";
 
-import { CategoryTitle, FiltersWrapper, SearchFiltersCont } from "./styles";
+import { FilterWrapper, SubHeaderContainer } from "./styles";
 
+import { AiOutlineMinus } from "react-icons/ai";
 import React from "react";
-import calender from "../../assets/year-icon.png";
-import expandableFilter from "../ExpandableFilter";
-import searchBar from "../SearchBar";
-import searchIcon from "../../assets/search-icon-yellow.png";
 
-// interface Props {
-//   genres: string;
-//   ratings: string;
-//   languages: string;
-//   searchMovies: string;
-// }
 export default function SearchFilters() {
   return (
-    <FiltersWrapper>
-      <SearchFiltersCont>
-        <img src={searchIcon} alt="search" />
-      </SearchFiltersCont>
-      <SearchFiltersCont>
-        <img src={calender} alt="filter" />
-      </SearchFiltersCont>
-    </FiltersWrapper>
+    <FilterWrapper>
+      <h1>Movie</h1>
+      <SubHeaderContainer>
+        <AiOutlineMinus size="20px" />
+        <span>Select genre(s)</span>
+      </SubHeaderContainer>
+    </FilterWrapper>
   );
 }

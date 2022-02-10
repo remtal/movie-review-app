@@ -1,29 +1,31 @@
 import styled from "styled-components";
 
-export const FiltersWrapper = styled.div`
+export const FilterWrapper = styled.div`
+  position: relative;
+  font-family: "Lato", sans-serif;
+  width: 250px;
+
+  grid-area: filter;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 250px;
-  height: 100px;
-  border-radius: 5px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4px;
   background-color: white;
-  padding: 20px;
-  grid-area: filter;
-`;
-
-export const SearchFiltersCont = styled.div`
-  position: relative;
-  :after {
-    content: "";
-    position: absolute;
-    top: 37px;
-    left: 0;
-    right: 0px;
-    height: 0.5em;
-    border-top: 2px solid #c4ca18;
+  padding-left: 24px;
+  > h1 {
+    font-size: 16px;
   }
-  /* transition: all 0.3s ease-in-out; */
 `;
+FilterWrapper.displayName = "FilterWrapper";
 
-export const CategoryTitle = styled.div``;
+export const SubHeaderContainer = styled.div`
+  span {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  svg {
+    padding-right: 15px;
+  }
+`;
+SubHeaderContainer.displayName = "SubHeaderContainer";
