@@ -2,15 +2,12 @@ import styled from "styled-components";
 
 export const MovieItemWrapper = styled.div`
   display: grid;
-  grid-template-rows: 0.1fr;
-  
+  grid-template-rows: auto 20px 0.1fr;
+  grid-template-columns: 190px auto;
+
   font-family: "Lato", sans-serif;
-  grid-template-areas:
-  "name ."
-  "genre ."
-  "description"
-  height: 200px;
-  width: 500px;
+  width: 700px;
+  height: fit-content;
   background-color: white;
   border-radius: 5px;
   grid-area: main;
@@ -39,11 +36,14 @@ Genre.displayName = "Genre";
 
 export const Description = styled.span`
   margin-bottom: 15px;
+  grid-row: 3;
 `;
 Description.displayName = "Description";
 
 export const Date = styled.span`
   color: #c4ca18;
+  grid-column: 2;
+  grid-row: 4;
 `;
 Date.displayName = "Date";
 
@@ -53,5 +53,12 @@ export const Score = styled.span`
   width: 23px;
   padding: 5px;
   border-radius: 5px;
+  height: 23px;
 `;
 Score.displayName = "Score";
+
+export const Thumbnail = styled.img`
+  height: 250px;
+  width: 172px;
+  grid-row: 1/5;
+`;

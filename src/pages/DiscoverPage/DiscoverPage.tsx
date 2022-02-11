@@ -4,7 +4,7 @@
 import * as colors from "../../utils/colors";
 import * as fetcher from "../../utils/fetcher";
 
-import { DiscoverWrapper, GlobalStyle } from "./styles";
+import { DiscoverWrapper, GlobalStyle, MovieContainer } from "./styles";
 import { useEffect, useState } from "react";
 
 import Axios from "axios";
@@ -14,14 +14,14 @@ import SearchBar from "../../components/SearchBar";
 import SideNavBar from "../../components/SideNavBar";
 
 export default function Discover() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any[]>([]);
   const apiKey = process.env.REACT_APP_API;
   useEffect(() => {
-    Axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`).then(
-      (response) => {
-        setData(response.data);
-      }
-    );
+    Axios.get(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`
+    ).then((response) => {
+      setData(response.data.results);
+    });
   }, [apiKey]);
   console.log(data);
   // Write a function to preload the popular movies when page loads & get the movie genres
@@ -32,9 +32,24 @@ export default function Discover() {
     <GlobalStyle>
       <DiscoverWrapper>
         <SideNavBar />
-        <MovieItem />
-        <SearchBar />
-        <ExpandableFilter />
+        <MovieContainer>
+          <div>{data.length} movies </div>
+          {data?.map((item, index) => {
+            return (
+              <MovieItem
+                key={index}
+                movieThumbnail={item.poster_path}
+                title={item.title}
+                vote_average={item.vote_average}
+                genre={item.genre_ids}
+                overview={item.overview}
+                release_date={item.release_date}
+              />
+            );
+          })}
+        </MovieContainer>
+        {/* <SearchBar /> */}
+        {/* <ExpandableFilter /> */}
       </DiscoverWrapper>
     </GlobalStyle>
   );
