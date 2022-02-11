@@ -6,11 +6,17 @@ export const FiltersWrapper = styled.div`
   gap: 30px;
   width: 250px;
   height: 100px;
+  margin-top: 39px;
 
   border-radius: 5px;
   background-color: white;
   padding: 20px;
   grid-area: search;
+  grid-column: 3;
+  @media (max-width: 768px) {
+    grid-area: searches;
+    background-color: transparent;
+  }
 `;
 
 export const SearchFiltersCont = styled.div`
@@ -40,6 +46,9 @@ export const SearchFiltersCont = styled.div`
     ::placeholder {
       color: #c4ca18;
     }
+    @media (max-width: 768px) {
+      background-color: transparent;
+    }
   }
   img {
     padding-right: 15px;
@@ -48,7 +57,13 @@ export const SearchFiltersCont = styled.div`
   & .year {
     font-weight: 200;
   }
+
   /* transition: all 0.3s ease-in-out; */
 `;
 
+export const YearFilterCont = styled(SearchFiltersCont)`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 export const CategoryTitle = styled.div``;

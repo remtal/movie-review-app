@@ -2,31 +2,56 @@
 
 import * as colors from "../../utils/colors";
 
-import { FiltersWrapper, SearchFiltersCont } from "./styles";
+import { FiltersWrapper, SearchFiltersCont, YearFilterCont } from "./styles";
+import React, { useEffect, useState } from "react";
 
-import React from "react";
+import Axios from "axios";
 import calender from "../../assets/year-icon.png";
 import expandableFilter from "../ExpandableFilter";
 import searchBar from "../SearchBar";
 import searchIcon from "../../assets/search-icon-yellow.png";
 
-// interface Props {
-//   genres: string;
-//   ratings: string;
-//   languages: string;
-//   searchMovies: string;
-// }
-export default function SearchFilters() {
+interface Props {
+  updateData: (response: any[]) => void;
+  className?: string;
+}
+
+export default function SearchFilters({ updateData, className }: Props) {
+  const [data, setData] = useState<any[]>([]);
+  const [search, setSearch] = useState("");
+  const apiKey = process.env.REACT_APP_API;
+
+  const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=`;
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    Axios.get(SEARCH_API + search).then((response) => {
+      setData(response.data.results);
+      updateData(response.data.results);
+    });
+  };
+
+  const handleChange = (e: any) => {
+    setSearch(e.target.value);
+  };
+
   return (
-    <FiltersWrapper>
-      <form action="/" method="get">
-        <SearchFiltersCont>
+    <FiltersWrapper className={className}>
+      <form onSubmit={handleSubmit}>
+        <SearchFiltersCont className={className}>
           <img src={searchIcon} alt="search" />
-          <input type="text" id="movie-search" placeholder="Search" />
+          <input
+            type="text"
+            className="search"
+            placeholder="Search"
+            value={search}
+            onChange={handleChange}
+          />
         </SearchFiltersCont>
       </form>
       <form action="/" method="get">
-        <SearchFiltersCont>
+        <YearFilterCont>
           <img src={calender} alt="filter" />
           <input
             type="text"
@@ -34,7 +59,7 @@ export default function SearchFilters() {
             id="movie-search"
             placeholder="Year of Release"
           />
-        </SearchFiltersCont>
+        </YearFilterCont>
       </form>
     </FiltersWrapper>
   );

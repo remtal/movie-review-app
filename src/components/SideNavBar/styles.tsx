@@ -15,8 +15,11 @@ export const SideNavBarCont = styled.div`
   background-color: ${colors.sideNavBar};
   font-family: "Lato", sans-serif;
   color: white;
-
   grid-area: nav;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SideNavHeader = styled.h1`

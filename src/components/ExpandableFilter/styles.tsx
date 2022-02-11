@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const FilterWrapper = styled.div`
   position: relative;
   font-family: "Lato", sans-serif;
+
   width: 250px;
   padding: 20px;
-
+  height: fit-content;
   grid-area: filter;
   display: flex;
   border-radius: 5px;
@@ -14,11 +15,16 @@ export const FilterWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   background-color: white;
+  grid-column: 3;
+  grid-row: 3;
+
   > h1 {
     font-size: 16px;
   }
-  /* grid-row: 2;
-  grid-column: 3; */
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 FilterWrapper.displayName = "FilterWrapper";
 

@@ -18,6 +18,10 @@ export const MovieItemWrapper = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const Name = styled.span`
@@ -25,18 +29,27 @@ export const Name = styled.span`
   font-weight: 800;
   margin-top: 0px;
   margin-bottom: 0px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 Name.displayName = "Name";
 
 export const Genre = styled.span`
   color: #c4ca18;
   font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 Genre.displayName = "Genre";
 
 export const Description = styled.span`
   margin-bottom: 15px;
   grid-row: 3;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 Description.displayName = "Description";
 
@@ -44,16 +57,23 @@ export const Date = styled.span`
   color: #c4ca18;
   grid-column: 2;
   grid-row: 4;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 Date.displayName = "Date";
 
 export const Score = styled.span`
   color: white;
   background-color: #c4ca18;
-  width: 23px;
+  width: fit-content;
   padding: 5px;
   border-radius: 5px;
   height: 23px;
+
+  @media (max-width: 768px) {
+    transform: scale(0.8);
+  }
 `;
 Score.displayName = "Score";
 
@@ -61,4 +81,7 @@ export const Thumbnail = styled.img`
   height: 250px;
   width: 172px;
   grid-row: 1/5;
+  @media (max-width: 768px) {
+    height: 220px;
+  }
 `;
