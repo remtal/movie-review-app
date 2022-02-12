@@ -46,9 +46,6 @@ export const SearchFiltersCont = styled.div`
     ::placeholder {
       color: #c4ca18;
     }
-    @media (max-width: 768px) {
-      background-color: transparent;
-    }
   }
   img {
     padding-right: 15px;
@@ -57,8 +54,15 @@ export const SearchFiltersCont = styled.div`
   & .year {
     font-weight: 200;
   }
+  /* svg {
+    display: none;
+  } */
 
-  /* transition: all 0.3s ease-in-out; */
+  @media (max-width: 768px) {
+    > input {
+      background-color: transparent;
+    }
+  }
 `;
 
 export const YearFilterCont = styled(SearchFiltersCont)`

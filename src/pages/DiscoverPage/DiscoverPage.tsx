@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 
 import Axios from "axios";
 import ExpandableFilter from "../../components/ExpandableFilter";
+import { HiMenu } from "react-icons/hi";
 import MovieItem from "../../components/MovieItem";
 import SearchBar from "../../components/SearchBar";
 import SideNavBar from "../../components/SideNavBar";
@@ -38,7 +39,11 @@ export default function Discover() {
   return (
     <GlobalStyle>
       <DiscoverWrapper>
-        <MobilePageTitle>Discover</MobilePageTitle>
+        <MobilePageTitle>
+          {" "}
+          <HiMenu size="40px" />
+          Discover
+        </MobilePageTitle>
         <SideNavBar />
         <MovieContainer>
           <div>{data.length} movies </div>

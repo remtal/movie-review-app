@@ -19,6 +19,7 @@ export const DiscoverWrapper = styled.main`
     "nav main filter";
 
   @media (max-width: 768px) {
+    padding-left: 10px;
     grid-template-areas:
       "title"
       "searches"
@@ -36,13 +37,14 @@ export const MovieContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-left: 10px;
   }
 `;
 MovieContainer.displayName = "MovieContainer";
 
 export const MobilePageTitle = styled.h1`
   @media (max-width: 768px) {
+    display: flex;
+    gap: 20px;
     grid-area: title;
     font-family: "Lato", sans-serif;
   }

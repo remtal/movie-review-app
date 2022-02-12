@@ -6,9 +6,8 @@ import { FiltersWrapper, SearchFiltersCont, YearFilterCont } from "./styles";
 import React, { useEffect, useState } from "react";
 
 import Axios from "axios";
+import { IoIosOptions } from "react-icons/io";
 import calender from "../../assets/year-icon.png";
-import expandableFilter from "../ExpandableFilter";
-import searchBar from "../SearchBar";
 import searchIcon from "../../assets/search-icon-yellow.png";
 
 interface Props {
@@ -48,6 +47,7 @@ export default function SearchFilters({ updateData, className }: Props) {
             value={search}
             onChange={handleChange}
           />
+          <IoIosOptions />
         </SearchFiltersCont>
       </form>
       <form action="/" method="get">
