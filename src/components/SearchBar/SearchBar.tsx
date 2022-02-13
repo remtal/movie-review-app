@@ -47,7 +47,7 @@ export default function SearchFilters({ updateData, className }: Props) {
             value={search}
             onChange={handleChange}
           />
-          <IoIosOptions />
+          <IoIosOptions size="35px" />
         </SearchFiltersCont>
       </form>
       <form action="/" method="get">

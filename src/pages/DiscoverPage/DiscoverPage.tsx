@@ -44,6 +44,8 @@ export default function Discover() {
           <HiMenu size="40px" />
           Discover
         </MobilePageTitle>
+        <SearchBar updateData={updateData} />
+
         <SideNavBar />
         <MovieContainer>
           <div>{data.length} movies </div>
@@ -62,7 +64,6 @@ export default function Discover() {
           })}
         </MovieContainer>
 
-        <SearchBar updateData={updateData} />
         <ExpandableFilter />
       </DiscoverWrapper>
     </GlobalStyle>

@@ -16,6 +16,11 @@ export const FiltersWrapper = styled.div`
   @media (max-width: 768px) {
     grid-area: searches;
     background-color: transparent;
+    width: 75%;
+    margin-top: 0px;
+    height: fit-content;
+    padding: 0;
+    padding-left: 20px;
   }
 `;
 
@@ -61,6 +66,13 @@ export const SearchFiltersCont = styled.div`
   @media (max-width: 768px) {
     > input {
       background-color: transparent;
+    }
+    > svg {
+      color: #c4ca18;
+      position: absolute;
+      right: -20%;
+      bottom: -21%;
+      border-bottom: 2px solid #c4ca18;
     }
   }
 `;

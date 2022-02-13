@@ -19,11 +19,11 @@ export const DiscoverWrapper = styled.main`
     "nav main filter";
 
   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
     padding-left: 10px;
-    grid-template-areas:
-      "title"
-      "searches"
-      "main";
+    padding-right: 10px;
+    gap: 5px;
   }
 `;
 
