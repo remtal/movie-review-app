@@ -43,7 +43,7 @@ export default function SearchFilters({ updateData, className }: Props) {
           <input
             type="text"
             className="search"
-            placeholder="Search"
+            placeholder="Search for movies"
             value={search}
             onChange={handleChange}
           />

@@ -37,35 +37,30 @@ export default function Discover() {
   }
 
   return (
-    <GlobalStyle>
-      <DiscoverWrapper>
-        <MobilePageTitle>
-          {" "}
-          <HiMenu size="40px" />
-          Discover
-        </MobilePageTitle>
-        <SearchBar updateData={updateData} />
+    <DiscoverWrapper>
+      <SideNavBar />
 
-        <SideNavBar />
-        <MovieContainer>
-          <div>{data.length} movies </div>
-          {data?.map((item, index) => {
-            return (
-              <MovieItem
-                key={item.id}
-                movieThumbnail={item.poster_path}
-                title={item.title}
-                vote_average={item.vote_average}
-                genre={item.genre_ids}
-                overview={item.overview}
-                release_date={item.release_date}
-              />
-            );
-          })}
-        </MovieContainer>
+      <SearchBar updateData={updateData} />
 
-        <ExpandableFilter />
-      </DiscoverWrapper>
-    </GlobalStyle>
+      <MovieContainer>
+        <span>{data.length} movies </span>
+
+        {data?.map((item, index) => {
+          return (
+            <MovieItem
+              key={item.id}
+              movieThumbnail={item.poster_path}
+              title={item.title}
+              vote_average={item.vote_average}
+              genre={item.genre_ids}
+              overview={item.overview}
+              release_date={item.release_date}
+            />
+          );
+        })}
+      </MovieContainer>
+
+      <ExpandableFilter />
+    </DiscoverWrapper>
   );
 }

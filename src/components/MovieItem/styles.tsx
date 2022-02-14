@@ -20,7 +20,7 @@ export const MovieItemWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 85%;
   }
 `;
 
@@ -38,6 +38,8 @@ Name.displayName = "Name";
 export const Genre = styled.span`
   color: #c4ca18;
   font-weight: 700;
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+
   @media (max-width: 768px) {
     font-size: 12px;
   }
@@ -47,6 +49,13 @@ Genre.displayName = "Genre";
 export const Description = styled.span`
   margin-bottom: 15px;
   grid-row: 3;
+  overflow: auto;
+  position: relative;
+  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent);
+  ::-webkit-scrollbar {
+    width: 20%;
+  }
+
   @media (max-width: 768px) {
     font-size: 10px;
   }

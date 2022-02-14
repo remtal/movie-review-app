@@ -10,7 +10,7 @@ export const DiscoverWrapper = styled.main`
   display: grid;
   grid-template-columns: 370px 766px 1fr;
   grid-template-rows: 60px 198px 220px;
-  background-color: #f6f7f9;
+  width: 100%;
 
   grid-template-areas:
     "nav . ."
@@ -21,9 +21,7 @@ export const DiscoverWrapper = styled.main`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-    gap: 5px;
+    gap: 50px;
   }
 `;
 
@@ -32,11 +30,19 @@ export const MovieContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   grid-area: main;
-  > div {
+  position: relative;
+  > span {
     font-family: "Lato", sans-serif;
   }
 
   @media (max-width: 768px) {
+    align-items: center;
+    z-index: -1;
+    > span {
+      position: absolute;
+      top: -29px;
+      left: 5%;
+    }
   }
 `;
 MovieContainer.displayName = "MovieContainer";
@@ -47,6 +53,7 @@ export const MobilePageTitle = styled.h1`
     gap: 20px;
     grid-area: title;
     font-family: "Lato", sans-serif;
+    padding-left: 20px;
   }
 `;
 

@@ -14,10 +14,10 @@ export const FiltersWrapper = styled.div`
   grid-area: search;
   grid-column: 3;
   @media (max-width: 768px) {
-    grid-area: searches;
     background-color: transparent;
+    margin-top: -35px;
+
     width: 75%;
-    margin-top: 0px;
     height: fit-content;
     padding: 0;
     padding-left: 20px;
@@ -34,6 +34,7 @@ export const SearchFiltersCont = styled.div`
     right: 0px;
     height: 0.5em;
     border-top: 2px solid #c4ca18;
+    opacity: 0.7;
   }
 
   input {
@@ -46,7 +47,7 @@ export const SearchFiltersCont = styled.div`
     outline: none;
     color: #c4ca18;
     font-family: "Lato", sans-serif;
-    font-weight: 600;
+    font-weight: 300;
 
     ::placeholder {
       color: #c4ca18;
@@ -59,20 +60,22 @@ export const SearchFiltersCont = styled.div`
   & .year {
     font-weight: 200;
   }
-  /* svg {
+  svg {
     display: none;
-  } */
+  }
 
   @media (max-width: 768px) {
     > input {
       background-color: transparent;
     }
     > svg {
+      display: fixed;
       color: #c4ca18;
       position: absolute;
-      right: -20%;
+      right: -16%;
       bottom: -21%;
       border-bottom: 2px solid #c4ca18;
+      opacity: 0.7;
     }
   }
 `;
