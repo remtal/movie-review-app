@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
-import * as colors from "../../utils/colors";
-
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import {
   DropButton,
@@ -14,8 +10,6 @@ import {
 import React, { useState } from "react";
 
 import Checkbox from "../Checkbox";
-
-interface Props {}
 
 export default function ExpandableFilter() {
   const genres = [

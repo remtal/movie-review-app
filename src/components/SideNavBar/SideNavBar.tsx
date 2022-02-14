@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import {
   CloseIcon,
   HamburgerIcon,
@@ -14,8 +12,6 @@ import {
 } from "./styles";
 import React, { useState } from "react";
 
-import { GrClose } from "react-icons/gr";
-import { HiMenu } from "react-icons/hi";
 import arrow from "../../assets/arrow-icon.png";
 import search from "../../assets/search-icon-white.png";
 
@@ -24,17 +20,7 @@ interface Props {
 }
 
 export default function SideNavBar({ className }: Props) {
-  const [open, setOpen] = useState(false);
-  const animationVariants = {
-    visible: {
-      opacity: 1,
-      transition: { duration: 0.25, ease: "easeInOut" },
-    },
-    hidden: {
-      opacity: 0,
-      transition: { duration: 0.25, ease: "easeInOut" },
-    },
-  };
+  const [open, setOpen] = useState(true);
 
   return (
     <SideNavBarCont className={className}>
@@ -48,7 +34,7 @@ export default function SideNavBar({ className }: Props) {
         <h1>Discover</h1>
 
         {!open && (
-          <MobileNav>
+          <MobileNav initial={{ width: 0 }} animate={{ width: 200 }}>
             <h1>Wesley</h1>
             <h1>Discover</h1>
             <h1>Watched</h1>

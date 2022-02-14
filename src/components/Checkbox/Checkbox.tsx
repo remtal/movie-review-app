@@ -1,13 +1,14 @@
+import { CheckboxBorder, CheckboxContainer, CheckboxIndicator } from "./styles";
 import React, { ReactElement, useState } from "react";
-
-import { CustomCheckbox } from "./styles";
 
 export default function Checkbox(): ReactElement {
   const [checked, setChecked] = useState(false);
 
-  const handleClick = () => setChecked(!checked);
-
   return (
-    <CustomCheckbox type="checkbox" onClick={handleClick} checked={checked} />
+    <CheckboxContainer onClick={() => setChecked(!checked)}>
+      <CheckboxBorder>
+        {checked ? <CheckboxIndicator /> : <div></div>}
+      </CheckboxBorder>
+    </CheckboxContainer>
   );
 }

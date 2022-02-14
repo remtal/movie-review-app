@@ -2,6 +2,7 @@ import * as colors from "../../utils/colors";
 
 import { GrClose } from "react-icons/gr";
 import { HiMenu } from "react-icons/hi";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SideNavBarCont = styled.div`
@@ -26,6 +27,8 @@ export const SideNavBarCont = styled.div`
 `;
 
 export const SideNavHeader = styled.h1`
+  cursor: pointer;
+
   position: relative;
   @media (max-width: 768px) {
     display: none;
@@ -34,7 +37,6 @@ export const SideNavHeader = styled.h1`
 
 export const SideNavMainLink = styled(SideNavHeader)`
   position: relative;
-  /* background-color: #c4ca18; */
   height: 70%;
 `;
 
@@ -49,8 +51,10 @@ export const NavIcon = styled.div`
 
 export const HeaderText = styled.div`
   position: relative;
+
   > h2 {
     font-weight: 400;
+    cursor: pointer;
 
     :after {
       content: "";
@@ -59,14 +63,16 @@ export const HeaderText = styled.div`
       left: 0;
       right: -20px;
       height: 0.5em;
-      border-top: 1px solid #31475f;
+      border-top: 1px solid ${colors.fontColor};
       z-index: -1;
     }
   }
   > p {
     font-weight: 300;
     opacity: 0.9;
+    cursor: pointer;
   }
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -81,6 +87,7 @@ export const HamburgerIcon = styled(HiMenu)`
 `;
 
 export const MobileHeader = styled.div`
+  display: none;
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -95,7 +102,7 @@ export const MobileHeader = styled.div`
 `;
 MobileHeader.displayName = "MobileHeader";
 
-export const MobileNav = styled.ul<{ open?: boolean }>`
+export const MobileNav = styled(motion.ul)<{ open?: boolean }>`
   display: none;
   @media (max-width: 768px) {
     display: flex;
@@ -112,9 +119,6 @@ export const MobileNav = styled.ul<{ open?: boolean }>`
     gap: 20px;
     font-size: 16px;
     padding-top: 80px;
-    transition: transform 0.3s ease-in-out;
-
-    transform: ${({ open }) => (open ? "translateX(100%)" : "translateY(0)")};
   }
 `;
 MobileNav.displayName = "MobileNav";

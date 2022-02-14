@@ -53,12 +53,12 @@ DropdownContent.displayName = "DropdownContent";
 
 export const DropdownItem = styled.div`
   display: flex;
-
-  gap: 10px;
+  align-items: center;
+  gap: 18px;
   > span {
     font-weight: 400;
   }
-  margin-top: 7px;
+  margin-top: 10px;
 `;
 DropdownItem.displayName = "DropdownItem";
 

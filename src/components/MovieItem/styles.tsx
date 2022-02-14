@@ -1,3 +1,5 @@
+import * as colors from "../../utils/colors";
+
 import styled from "styled-components";
 
 export const MovieItemWrapper = styled.div`
@@ -36,7 +38,7 @@ export const Name = styled.span`
 Name.displayName = "Name";
 
 export const Genre = styled.span`
-  color: #c4ca18;
+  color: ${colors.primaryColor};
   font-weight: 700;
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
 
@@ -63,7 +65,7 @@ export const Description = styled.span`
 Description.displayName = "Description";
 
 export const Date = styled.span`
-  color: #c4ca18;
+  color: ${colors.primaryColor};
   grid-column: 2;
   grid-row: 4;
   @media (max-width: 768px) {
@@ -74,7 +76,7 @@ Date.displayName = "Date";
 
 export const Score = styled.span`
   color: white;
-  background-color: #c4ca18;
+  background-color: ${colors.primaryColor};
   width: fit-content;
   padding: 5px;
   border-radius: 5px;

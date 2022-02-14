@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import * as colors from "../../utils/colors";
-
 import { FiltersWrapper, SearchFiltersCont, YearFilterCont } from "./styles";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Axios from "axios";
 import { IoIosOptions } from "react-icons/io";

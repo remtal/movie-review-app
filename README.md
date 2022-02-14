@@ -1,25 +1,25 @@
 # cord Coding Challenge (Front-end)
 
-### Introduction
+### Movie Database Coding Challenge
 
-Welcome! This coding challenge is designed to explore your React & SCSS frontend skills. You will have to create a simple SPA based off the provided mockup and make a few API calls to a public web API.
+This is a coding challenge for cord. The task is to create a (SPA) single page application that can host movies. The application must have search functionalities implemented and must be device responsive. A mock-up has been provided and all designs have been completed accordingly and several API calls have been made to public MovieDB API.
 
-### The challenge
+### How to Install and Run
 
-You have to complete the test and write any necessary code so that the discover page looks like this [mockup] designs. All the images/icons you need are already imported and you can find them under the images folder.
+Simply cloning the repo, running "yarn build" and then "yarn start" is enough to run the application locally. The application currently does not have any remote deployment set-up.
 
-The discover page should enable the user to search for movies as keywords are typed into the search bar. Functionality for filtering does not need to be implemented, however the filter categories should still be expandable/collapsable upon clicking. On mobile devices, the navigation bar should slide in from left to right when the user clicks on the hamburger icon, and back when the user clicks on a close icon or outside the SideBar. In addition, you have to add all the responsive stylesheets for the app to run smoothly on mobile devices.
+### Technologies Used.
 
-Movie data can be queried via:
+The application has been built using React, HTML and CSS all for the Front-End. Typescript was also implemented to improve the efficiency and precision of the code.
 
-- [theMovieDB]
+The application makes use of several libraries:
 
-Packages & Technologies used in the repo:
-
-- `axios`
-- `node-sass`
-- `react-router-dom`
-- `styled-components`
+- React-Router-Dom
+- Styled-Components
+- Node-Sass
+- Framer-Motion
+- React-Icons
+- Axios
 
 ### Submission guide
 

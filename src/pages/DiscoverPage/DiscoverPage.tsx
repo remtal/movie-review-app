@@ -22,6 +22,8 @@ import SideNavBar from "../../components/SideNavBar";
 
 export default function Discover() {
   const [data, setData] = useState<any[]>([]);
+  const [genre, setGenre] = useState<any[]>([]);
+
   const apiKey = process.env.REACT_APP_API;
 
   const DISCOVER_API = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
@@ -39,12 +41,9 @@ export default function Discover() {
   return (
     <DiscoverWrapper>
       <SideNavBar />
-
       <SearchBar updateData={updateData} />
-
       <MovieContainer>
         <span>{data.length} movies </span>
-
         {data?.map((item, index) => {
           return (
             <MovieItem
@@ -59,7 +58,6 @@ export default function Discover() {
           );
         })}
       </MovieContainer>
-
       <ExpandableFilter />
     </DiscoverWrapper>
   );

@@ -1,3 +1,5 @@
+import * as colors from "../../utils/colors";
+
 import styled from "styled-components";
 
 export const FiltersWrapper = styled.div`
@@ -33,7 +35,7 @@ export const SearchFiltersCont = styled.div`
     left: 0;
     right: 0px;
     height: 0.5em;
-    border-top: 2px solid #c4ca18;
+    border-top: 2px solid ${colors.primaryColor};
     opacity: 0.7;
   }
 
@@ -45,12 +47,12 @@ export const SearchFiltersCont = styled.div`
     border: none;
     appearance: none;
     outline: none;
-    color: #c4ca18;
+    color: ${colors.primaryColor};
     font-family: "Lato", sans-serif;
     font-weight: 300;
 
     ::placeholder {
-      color: #c4ca18;
+      color: ${colors.primaryColor};
     }
   }
   img {
@@ -70,11 +72,11 @@ export const SearchFiltersCont = styled.div`
     }
     > svg {
       display: fixed;
-      color: #c4ca18;
+      color: ${colors.primaryColor};
       position: absolute;
       right: -16%;
       bottom: -21%;
-      border-bottom: 2px solid #c4ca18;
+      border-bottom: 2px solid ${colors.primaryColor};
       opacity: 0.7;
     }
   }
