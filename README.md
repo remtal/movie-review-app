@@ -1,12 +1,10 @@
-# cord Coding Challenge (Front-end)
+# Movie Database SPA
 
-### Movie Database Coding Challenge
-
-This is a coding challenge for cord. The task is to create a (SPA) single page application that can host movies. The application must have search functionalities implemented and must be device responsive. A mock-up has been provided and all designs have been completed accordingly and several API calls have been made to public MovieDB API.
+This is a single page application that allows users to search through a movie database to retrieve films. The application has search functionalities implemented and is device responsive.
 
 ### How to Install and Run
 
-Simply cloning the repo, running "yarn build" and then "yarn start" is enough to run the application locally. The application currently does not have any remote deployment set-up.
+Simply cloning the repo, running "yarn build" and then "yarn start" is enough to run the application locally. The application is not currently remotely deployed.
 
 ### Technologies Used.
 
@@ -21,5 +19,4 @@ The application makes use of several libraries:
 - React-Icons
 - Axios
 
-[mockup]: https://cord-coding-challenges.s3-eu-west-1.amazonaws.com/frontend-test-mockups.zip
 [themoviedb]: https://www.themoviedb.org/documentation/api
